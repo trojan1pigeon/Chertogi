@@ -1,0 +1,439 @@
+body{
+    margin: 0;
+    background-color: #000;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+hr{
+    max-width: 60%;
+    margin-top: 0;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+/*Начало шапки*/
+.block-hat{
+    width: 100%;
+    min-height: 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.logotip{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.logo-text{
+    color: white;
+}
+.image-logo{
+    height: 85px;
+    width: 85px;
+}
+.text-hat{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+/*Адаптация под телефон*/
+@media (min-width: 360px) and (max-width: 606px){
+    .text-hat{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .block-hat{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .logotip{
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .image-logo{
+        height: 70%;
+        width: 70%;
+    }
+    .logo-text{
+        font-size: 45px;
+    }
+}
+/*Конец шапки*/
+
+/*Начало первого блока*/
+.block-one{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    background: linear-gradient(#000000, #2B2929);
+}
+.block-one-inside{
+    color: white;
+    font-size: 24px;
+    margin-top: 144px;
+    
+}  
+.text-block-one{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.block-one-text-2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.buttons-block-one{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 32px;
+    padding-top: 30px;
+    gap: 89px;
+    background-repeat: 5%;
+}
+.button-block-one{
+    background: #000;
+    padding: 30px;
+    font-weight: bold;
+}
+.button-block-one-2{
+    border: 2px solid #310000;
+    background: #7B0404;
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.block-one-picture{
+    width: 100%;
+    max-width: 782px;
+    height: 576px;
+}
+/*Адаптация первого блока*/
+@media (min-width: 360px) and (max-width: 560px){
+    .block-one-inside-2{
+        display: none;
+    }
+    .buttons-block-one{
+        display: flex;
+        justify-content: center;
+        gap: 42px;
+    }
+    .button-block-one{
+        padding: 35px;
+        font-size: 40px;
+    }
+    .block-one-text-2{
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    .block-one-inside{
+        margin-top: 120px; 
+    }  
+    .logo-text{
+        margin-bottom: 60px;
+    }
+}
+/*Конец первого блока*/
+
+/*Начало второго блока*/
+.block-two{
+    background: #040404;
+    color: white;
+}
+.main-text{
+    text-align: center;
+}
+.main-title{
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 43px;
+}
+.main-text-inside{
+    font-size: 40px;
+    padding-top: 43px;
+}
+.main-text-second{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 43px;
+    padding-bottom: 43px;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.card{
+    width: 650px; 
+    position: relative;
+}
+.card-img{
+    width: 650px;
+    height: 439px;
+}
+.card-text-title{
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+}
+.card-text{
+    width: 650px;
+    position: absolute;
+    top: 35%;
+}
+.card-text-inside{
+    margin: 0px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #310000;
+    background: #7B0404;
+    padding: 10px;
+}
+/* ----------------------------------------- */
+.portfolio ul, .portfolio li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.portfolio ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 120px;
+}  
+.portfolio li{
+    display: inline-block;
+    width: 650px;
+    position: relative;
+}
+.portfolio li:hover .descr{
+    opacity: 1;
+}
+.portfolio img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.descr{
+    font-size: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s;
+}
+.descr p{
+    padding-top: 5%;
+}
+.descr a{
+    text-decoration: none;
+    color: grey;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.descr a:hover{
+    transform: scale(1.45);
+    color: red;
+}
+/*Адапатация под телефон*/
+@media (min-width: 360px) and (max-width: 560px){
+    .descr{
+        font-size: 16px;
+    }
+    .descr p{
+        margin: 0 30px;
+    }
+    .descr a{
+        position: relative;
+        top: 12%;
+    }
+}
+
+/*Блок третий*/
+.block-three{
+    color: white;
+    background: linear-gradient(#010101, #000000);
+}
+.block-three .main-title{
+    text-align: center;
+}
+/*Слайдер*/
+.slider{
+    position: relative;
+    padding: 0px 60px;
+}
+.slider-item{
+    text-align: center;
+}
+.slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin: -30px 0 0 0;
+    z-index: 10px;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+}
+.slider .slick-arrow.slick-prev{
+    left: 0;
+    background: url(image/backward-arrow.png) 0 0 / 100% no-repeat;
+}
+.slider .slick-arrow.slick-next{
+    right: 0;
+    background: url(image/skip-track.png) 0 0 / 100% no-repeat;
+}
+
+.slick-list{
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+    min-width: 0;
+}
+.slider .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+.slider .slick-dots li{
+    list-style: none;
+    margin: 0px 10px;
+}
+ul.slick-dots{
+    padding: 0;
+}
+.slider .slick-dots button{
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.slider .slick-dots li.slick-active button{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+@media (min-width: 360px) and (max-width: 560px){
+    .block-three img{
+        width: 100%;
+    }
+}
+/*Начало четвертого блока*/
+.button-footer{
+    background-color: #730808;
+
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    margin: 0 15px;
+}
+.footer-title{
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.footer-title-two{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.field{
+    display: flex;
+    gap: 30px 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 9px;
+    font-size: 32px;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+}
+
+.field input{
+    background-color: transparent;
+    width: 400px;;
+    height: 45px;
+    border: 2px solid silver;
+    color: #fff;
+    padding: 10px 0px 10px 30px;
+    font-size: 20px;
+}
+.field .submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    background-color: rgb(145, 0, 0);
+    width: 200px;
+    padding: 10px 10px 10px 10px;
+}
+.field .submit:hover{
+    background-color: rgb(95, 0, 0);
+    color:#fff;
+}
+/* ---------------------- */
+.bottom{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px 800px ;
+}
+.bottom h2,p{
+    margin: 2px 0;
+}
+.bottom p{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.bottom img{
+    width: 100%;
+    max-width: 50px;
+}
+.social_seti{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+@media (min-width: 360px ) and (max-width: 1015px){
+
+    .field{
+        flex-direction: column;
+        align-items: center;
+    }
+    .field input{
+        width: 280px;
+    }
+}
